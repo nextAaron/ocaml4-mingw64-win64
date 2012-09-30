@@ -151,15 +151,16 @@ PACKLD=$(TOOLPREF)ld -r $(NATIVECCLINKOPTS) -o #there must be a space after this
 
 ############# Configuration for the contributed libraries
 
-OTHERLIBRARIES=win32unix str num win32graph dynlink bigarray systhreads
+OTHERLIBRARIES=win32unix str num win32graph dynlink bigarray systhreads labltk
 
 ### Name of the target architecture for the "num" library
 BNG_ARCH=amd64
 BNG_ASM_LEVEL=1
 
 ### Configuration for LablTk (not supported)
-TK_DEFS=
-TK_LINK=
+TK_ROOT=C:/Programs/mingw64
+TK_DEFS=-I$(TK_ROOT)/include
+TK_LINK=$(TK_ROOT)/lib/libtk85.a $(TK_ROOT)/lib/libtcl85.a -lws2_32
 
 ############# Aliases for common commands
 
