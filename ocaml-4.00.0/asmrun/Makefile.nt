@@ -73,6 +73,7 @@ win32.$(O): ../byterun/win32.c
 	$(CC) $(CFLAGS) -c $<
 
 clean::
+	rm -f .depend.nt
 	rm -f $(LINKEDFILES)
 
 clean::

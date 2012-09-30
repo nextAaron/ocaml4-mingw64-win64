@@ -54,6 +54,7 @@ lexer.ml: lexer.mll
 
 clean::
 	rm -f lexer.ml
+	rm -f parser.output
 
 beforedepend:: lexer.ml
 

@@ -26,4 +26,7 @@ install::
 	cp ocamlmktop $(BINDIR)/ocamlmktop$(EXE)
 
 clean::
+	rm -f myocamlbuild_config.ml
+	rm -f ocamldep.bak
+	rm -f ocamlmktop
 	rm -f ocamlmktop$(EXE)

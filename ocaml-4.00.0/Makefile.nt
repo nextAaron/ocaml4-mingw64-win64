@@ -682,6 +682,13 @@ depend: beforedepend
 alldepend:: depend
 
 distclean:
+	rm -f myocamlbuild_config.ml
+	rm -f boot/*.cma
+	rm -f boot/*.cmi
+	rm -f boot/*.cmo
+	rm -f boot/camlheader
+	rm -f boot/ocamlrun.exe
+	rm -f boot/ocamlyacc.exe
 	./build/distclean.sh
 
 .PHONY: all backup bootstrap camlp4opt camlp4out checkstack clean
