@@ -55,13 +55,13 @@ findlib.conf: findlib.conf.in
 	cat findlib.conf.in | \
 		tools/patch '@SITELIB@' '$(OCAML_SITELIB)' >findlib.conf
 	if ocamlc.opt >/dev/null 2>&1; then \
-		echo 'ocamlc="ocamlc.opt"' >>findlib.conf; \
+		echo 'ocamlc="ocamlc.opt.exe"' >>findlib.conf; \
 	fi
 	if ocamlopt.opt >/dev/null 2>&1; then \
-		echo 'ocamlopt="ocamlopt.opt"' >>findlib.conf; \
+		echo 'ocamlopt="ocamlopt.opt.exe"' >>findlib.conf; \
 	fi
 	if ocamldep.opt >/dev/null 2>&1; then \
-		echo 'ocamldep="ocamldep.opt"' >>findlib.conf; \
+		echo 'ocamldep="ocamldep.opt.exe"' >>findlib.conf; \
 	fi
 
 .PHONY: install-doc
